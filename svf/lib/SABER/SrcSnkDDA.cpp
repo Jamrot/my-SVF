@@ -68,7 +68,7 @@ void SrcSnkDDA::analyze(SVFModule* module)
     for (SVFGNodeSetIter iter = sourcesBegin(), eiter = sourcesEnd();
             iter != eiter; ++iter)
     {
-        setCurSlice(*iter);
+        setCurSlice(*iter); // *iter: SVFGnode
 
         DBOUT(DGENERAL, outs() << "Analysing slice:" << (*iter)->getId() << ")\n");
         ContextCond cxt;
